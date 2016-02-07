@@ -1,0 +1,27 @@
+<div>
+    <div ng-if="data.status != 'error'" class="modal-header">
+        <h3 class="modal-title upper">{{data.title}}</h3>
+    </div>
+    <div class="modal-body col-xs-12 center-block">
+        <div ng-if="data.status == 'error'">
+            <img class="img-responsive" src="/assets/images/monster/falloenlanave.png">
+            <hr>
+        </div>
+        <div ng-if="data.status == 'success'">
+            <img class="img-responsive img-modal-success center-block" src="/assets/images/monster/alien-is-happy.png">
+            <hr>
+        </div>
+        <div ng-if="data.status == 'confirm'">
+            <img class="img-responsive img-modal-confirm center-block" src="/assets/images/monster/alien-is-ko.png">
+            <hr>
+        </div>
+        <div>
+            <h3 class="text-center">{{data.message}}</h3>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button ng-if="data.status != 'success' && data.status != 'error'"class="btn btn-red-bg btn-md upper" ng-click="cancel()"><i class="fa fa-times"></i> Cerrar</button>
+        <button class="btn red-bg btn-md upper" ng-click="ok()"><i class="fa fa-chevron-circle-right"></i> Acceptar</button>
+    </div>
+
+</div>
