@@ -2,10 +2,22 @@
 @import 'typography';
 @import 'bootstrap';
 @import 'home';
+@import 'statement';
+@import 'howto';
+@import 'statistics';
 
 body {
   font-family: Helvetica, sans-serif;
-  color: $font-color--dark;
+  color: $font-color--light;
   background-color: $background--light;
   padding: $half-space;
+
+  .img-back{
+    border-image-outset: 0;
+    display: inline-block;
+    margin-top: -20px;
+    margin-bottom: -20px;
+    position: absolute;
+    z-index: -10;
+  }
 }
