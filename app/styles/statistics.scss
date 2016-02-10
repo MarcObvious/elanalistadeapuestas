@@ -1,13 +1,32 @@
-/*
-body {
-  padding: 3em;
-  margin: 0;
-  //background-size: 1920px 1280px;
-  background: url(../images/wall_1_1920.jpg) no-repeat;
-  background-size: 100%;
-  color: white;
-  display: block;
-  font: 13px/18px "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
+.statistics-body {
+  .statistics-title {
+    position:absolute;
+    top: 5%;
+    left: 10%;
 
-*/
+    h1 {
+      font-size: 90px;
+      font-weight: bold;
+      margin-top: 1px;
+    }
+    h2 {
+      margin-left: 50px;
+      margin-bottom: -15px;
+      font-size: 40px;
+      font-weight: bold;
+    }
+
+  }
+  .statistics-arrow-up {
+    position: absolute;
+    top:5%;
+    left:50%;
+    cursor:pointer;
+  }
+  .statistics-arrow-down {
+    position: absolute;
+    bottom:5%;
+    left:50%;
+    cursor:pointer;
+  }
+}

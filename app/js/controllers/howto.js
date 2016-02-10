@@ -1,4 +1,4 @@
-function HowtoCtrl($log) {
+function HowtoCtrl($log, $state) {
     'ngInject';
 
     // ViewModel
@@ -12,7 +12,7 @@ function HowtoCtrl($log) {
         $state.go('Statement', {}, {'location': true, 'reload': true});
     };
     vm.arrowDown = function(){
-        $state.go('Statitstics', {}, {'location': true, 'reload': true});
+        $state.go('Statistics', {}, {'location': true, 'reload': true});
     };
 
 }
