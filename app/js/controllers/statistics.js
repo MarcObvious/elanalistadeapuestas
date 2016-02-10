@@ -1,4 +1,4 @@
-function StatisticsCtrl($log, $modal) {
+function StatisticsCtrl($log) {
     'ngInject';
 
     // ViewModel

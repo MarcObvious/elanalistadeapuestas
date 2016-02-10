@@ -10,7 +10,7 @@ function HomeCtrl($log, $state) {
 
     vm.buttonClick = function(){
         $state.go('Statement', {}, {'location': true, 'reload': true});
-    }
+    };
 
 }
 

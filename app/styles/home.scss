@@ -1,16 +1,37 @@
-body {
-  .container {
+.home-body {
+  .home-title {
+    position:absolute;
+    top: 5%;
+    left: 10%;
 
-    padding: 3em;
-    margin: 0;
-    //background-size: 1920px 1280px;
-   /* background: url(../images/wall_1_1920.jpg) no-repeat;
-    background-size: 100%;
-    color: white;*/
+    h1 {
+      font-size: 90px;
+      font-weight: bold;
+      margin-top: 1px;
+    }
+    h2 {
+      margin-left: 50px;
+      margin-bottom: -15px;
+      font-size: 40px;
+      font-weight: bold;
+    }
 
-    display: block;
-    font: 13px/18px "Helvetica Neue", Helvetica, Arial, sans-serif;
   }
-
+  .home-quote {
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    h3 {
+      font-size: 20px;
+      font-weight: lighter;
+      font-style: italic;
+    }
+  }
+  .home-arrow {
+    position: absolute;
+    bottom:5%;
+    left:50%;
+    cursor:pointer;
+  }
 }
 

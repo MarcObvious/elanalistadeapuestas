@@ -1,4 +1,4 @@
-function HowtoCtrl($log, $modal) {
+function HowtoCtrl($log) {
     'ngInject';
 
     // ViewModel
@@ -7,6 +7,13 @@ function HowtoCtrl($log, $modal) {
     vm.title = 'Howto Page!';
     vm.content = 'It\'s already under construction! see you soon!';
     $log.debug(vm);
+
+    vm.arrowUp = function(){
+        $state.go('Statement', {}, {'location': true, 'reload': true});
+    };
+    vm.arrowDown = function(){
+        $state.go('Statitstics', {}, {'location': true, 'reload': true});
+    };
 
 }
 

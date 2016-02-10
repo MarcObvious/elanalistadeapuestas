@@ -1,11 +1,26 @@
-<img class="img-responsive img-back" src="../images/wall_1_1920.jpg">
-<div class="container body-statement">
-    <h1 class="heading -large">{{home.title}}</h1>
+<div class="container home-body">
+    <div class="overlay layer1" background-image
+         data-background-src="../images/wall_1_1920.jpg"
+         data-background-size="cover"
+         data-background-repeat="no-repeat"
+         data-background-attachment="fixed"></div>
 
-    <h3 class="heading -medium">{{home.content}}</h3>
-    <div class="row-fluid">
-        <div class="col-lg-6">
-            <button type="button" class="btn btn-primary btn-lg text-uppercase" ng-click="home.buttonClick()">hitme!</button>
-        </div>
+    <div class="home-title">
+        <h2>{{home.subtitle}}</h2>
+        <h1>{{home.title}}</h1>
     </div>
+
+    <div class="home-quote">
+        <h3>
+            <i class="fa fa-quote-left"></i>
+            Lorem ipsum és un text de farciment usat<br>
+            per la indústria de la tipografia i la imprempta.
+            <i class="fa fa-quote-right"></i>
+        </h3>
+    </div>
+
+    <div class="home-arrow"  ng-click="home.buttonClick()">
+        <h1 class="heading -xl"><i class="fa fa-arrow-down"></i></h1>
+    </div>
+
 </div>

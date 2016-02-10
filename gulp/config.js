@@ -2,77 +2,85 @@
 
 export default {
 
-  browserPort: 3000,
-  UIPort: 3001,
+    browserPort: 3000,
+    UIPort: 3001,
 
-  sourceDir: './app/',
-  buildDir: './build/',
+    sourceDir: './app/',
+    buildDir: './build/',
 
-  styles: {
-    src: 'app/styles/**/*.scss',
-    dest: 'build/css',
-    prodSourcemap: false,
-    sassIncludePaths: ['./node_modules/bootstrap-sass/assets/stylesheets']
-  },
+    styles: {
+        src: 'app/styles/**/*.scss',
+        dest: 'build/css',
+        prodSourcemap: false,
+        sassIncludePaths: [
+            './node_modules/bootstrap-sass/assets/stylesheets',
+            './node_modules/font-awesome/scss'
 
-  scripts: {
-    src: 'app/js/**/*.js',
-    dest: 'build/js'
-  },
+        ]
+    },
 
-  images: {
-    src: 'app/images/**/*',
-    dest: 'build/images'
-  },
+    scripts: {
+        src: 'app/js/**/*.js',
+        dest: 'build/js'
+    },
 
-  fonts: {
-    src: ['app/fonts/**/*'],
-    dest: 'build/fonts'
-  },
+    images: {
+        src: 'app/images/**/*',
+        dest: 'build/images'
+    },
 
-  assetExtensions: [
-    'js',
-    'css',
-    'png',
-    'jpe?g',
-    'gif',
-    'svg',
-    'eot',
-    'otf',
-    'ttc',
-    'ttf',
-    'woff2?'
-  ],
+    fonts: {
+        src: [
+            'app/fonts/**/*',
+            './node_modules/bootstrap-sass/assets/fonts/**/*',
+            './node_modules/font-awesome/fonts/*'
+        ],
+        dest: 'build/fonts'
+    },
 
-  views: {
-    index: 'app/index.html',
-    src: 'app/views/**/*.html',
-    dest: 'app/js'
-  },
+    assetExtensions: [
+        'js',
+        'css',
+        'png',
+        'jpe?g',
+        'gif',
+        'svg',
+        'eot',
+        'otf',
+        'ttc',
+        'ttf',
+        'woff2?'
+    ],
 
-  gzip: {
-    src: 'build/**/*.{html,xml,json,css,js,js.map,css.map}',
-    dest: 'build/',
-    options: {}
-  },
+    views: {
+        index: 'app/index.html',
+        src: 'app/views/**/*.html',
+        dest: 'app/js'
+    },
 
-  browserify: {
-    bundleName: 'main.js',
-    prodSourcemap: false
-  },
+    gzip: {
+        src: 'build/**/*.{html,xml,json,css,js,js.map,css.map}',
+        dest: 'build/',
+        options: {}
+    },
 
-  test: {
-    karma: 'test/karma.conf.js',
-    protractor: 'test/protractor.conf.js'
-  },
+    browserify: {
+        bundleName: 'main.js',
+        prodSourcemap: false
+    },
 
-  init: function() {
-    this.views.watch = [
-      this.views.index,
-      this.views.src
-    ];
+    test: {
+        karma: 'test/karma.conf.js',
+        protractor: 'test/protractor.conf.js'
+    },
 
-    return this;
-  }
+    init: function() {
+        this.views.watch = [
+            this.views.index,
+            this.views.src
+        ];
+
+        return this;
+    }
 
 }.init();

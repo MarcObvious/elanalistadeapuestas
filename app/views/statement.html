@@ -1,14 +1,22 @@
-<div class="container body-statement">
-    <img class="img-responsive img-back" src="../images/wall_2_1920.jpg">
+<div class="container statement-body">
+
+    <div class="overlay layer1" background-image
+         data-background-src="../images/wall_2_1920.jpg"
+         data-background-size="cover"
+         data-background-repeat="no-repeat"
+         data-background-attachment="fixed"></div>
+
     <h1 class="heading -large">{{statement.title}}</h1>
 
     <h3 class="heading -medium">{{statement.content}}</h3>
     <div class="row-fluid">
-        <div class="col-lg-12">
-            <div class="construction"></div>
+
+        <div class="statement-arrow-up"  ng-click="statement.arrowUp()">
+            <h1 class="heading -xl"><i class="fa fa-arrow-up"></i></h1>
         </div>
-        <div class="col-lg-6">
-            <button type="button" class="btn btn-primary btn-lg text-uppercase" ng-click="statement.buttonClick()">hitme!</button>
+
+        <div class="statement-arrow-down"  ng-click="statement.arrowDown()">
+            <h1 class="heading -xl"><i class="fa fa-arrow-down"></i></h1>
         </div>
     </div>
 </div>

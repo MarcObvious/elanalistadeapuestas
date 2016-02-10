@@ -8,6 +8,7 @@ function ExampleDirective() {
       message: '@exampleDirective'
     },
     link: (scope, element) => {
+      console.log('puta');
       element.on('click', () => {
         window.alert('Element clicked: ' + scope.message);
       });

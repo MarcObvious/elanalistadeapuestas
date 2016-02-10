@@ -8,9 +8,12 @@ function StatementCtrl($log, $state) {
     vm.content = 'It\'s already under construction! see you soon!';
     $log.debug(vm);
 
-    vm.buttonClick = function(){
+    vm.arrowUp = function(){
         $state.go('Home', {}, {'location': true, 'reload': true});
-    }
+    };
+    vm.arrowDown = function(){
+        $state.go('Howto', {}, {'location': true, 'reload': true});
+    };
 
 }
 
