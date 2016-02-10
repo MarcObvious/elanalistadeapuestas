@@ -1,5 +1,5 @@
 const AppSettings = {
-  appTitle: 'MarcObvious Portfolio',
+  appTitle: 'The Analyst',
   apiUrl: '/api/v1'
 };
 
