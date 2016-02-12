@@ -1,19 +1,17 @@
 <div class="container statement-body">
 
-    <div class="overlay layer1" background-image
-         data-background-src="../images/wall_3_1920.jpg"
-         data-background-size="cover"
-         data-background-repeat="no-repeat"
-         data-background-attachment="fixed"></div>
+    <div class="layer1" background-image
+         data-background-src="../images/wall_3_1920.jpg"></div>
 
     <h1 class="heading -large">{{statement.title}}</h1>
 
     <h3 class="heading -medium">{{statement.content}}</h3>
-    <div class="statement-arrow-up"  ng-click="statement.arrowUp()">
+
+    <div class="arrow-up"  ng-click="statement.arrowUp()">
         <h1 class="heading -xl"><i class="fa fa-arrow-up"></i></h1>
     </div>
 
-    <div class="statement-arrow-down"  ng-click="statement.arrowDown()">
+    <div class="arrow-down"  ng-click="statement.arrowDown()">
         <h1 class="heading -xl"><i class="fa fa-arrow-down"></i></h1>
     </div>
 </div>
