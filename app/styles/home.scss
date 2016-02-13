@@ -6,6 +6,9 @@
 
     h1 {
       font-size: 90px;
+      @media (max-width: 768px) {
+        font-size: 70px;
+      }
       font-weight: bold;
       margin-top: 1px;
     }
@@ -13,6 +16,9 @@
       margin-left: 50px;
       margin-bottom: -15px;
       font-size: 40px;
+      @media (max-width: 768px) {
+        font-size: 30px;
+      }
       font-weight: bold;
     }
 
@@ -20,7 +26,18 @@
   .home-quote {
     position:absolute;
     top: 50%;
-    left: 50%;
+    //left: 30%;
+    @media (min-width: 768px) {
+       left:30%
+    }
+    @media (min-width: 991px) {
+      left: 40%
+    }
+    @media (min-width: 1199px) {
+      left: 50%
+    }
+
+
     h3 {
       font-size: 20px;
       font-weight: lighter;
