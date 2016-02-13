@@ -1,0 +1,27 @@
+.search {
+  //position:absolute;
+  //width:40vw;
+  //top:5vh;
+  //left: 45%;
+  .search-block {
+    //position:fixed;
+    .search-select {
+      width:120px;
+      position: relative;
+      //width:50%;
+      top:0;
+
+    }
+    .search-text {
+      position: absolute;
+      width:170px;
+      left:120px;
+    }
+
+    .search-button {
+      position: absolute;
+      left: 290px;
+    }
+
+  }
+}

@@ -1,0 +1,23 @@
+<div class="search">
+    <div class="row clearfix">
+        <div class="input-group search-block">
+            <div class="search-select">
+                <select class="input-group form-control" ng-model="search.competition">
+                    <option value="0" selected>BBVA</option>
+                    <option value="1">Premier</option>
+                    <option value="2">Bundesliga</option>
+                </select>
+            </div>
+            <div class="search-text">
+                <input type="text" class="input-group form-control" placeholder="Team" ng-model="search.team">
+            </div>
+            <div class="search-button">
+                <span class="input-group-btn">
+                <button class="btn btn-default" type="button" ng-click="doSearch()">
+                    <i class="fa fa-search"></i>
+                </button>
+            </span>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,15 @@
+<div class="timeline">
+    <div class="col-lg-12">
+        <p class="input-group">
+            <input title="Date today" type="text" name="date_picker"
+                   class="form-control" uib-datepicker-popup="{{datepicker.format}}"
+                   ng-model="data.expectedDate" is-open="datepicker.opened"
+                   datepicker-options="datepicker.dateOptions" date-disabled="disabled(date, mode)"
+                   close-text="Close" placeholder="Date"/>
+
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-info" ng-click="openDatepicker($event)"><i class="fa fa-calendar"></i></button>
+                    </span>
+        </p>
+    </div>
+</div>

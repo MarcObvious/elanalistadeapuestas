@@ -1,13 +1,34 @@
 @import 'vars';
 @import 'typography';
+@import 'directives';
 @import 'bootstrap';
 @import '../../node_modules/font-awesome/scss/font-awesome';
 @import 'home';
 @import 'statement';
 @import 'howto';
 @import 'statistics';
+@import 'grid';
 
 html {
+
+  .arrow-up {
+    position: absolute;
+    //display: block;
+    top:5vh;
+    left: 45%;
+    margin-right: -55%;
+
+    cursor:pointer;
+  }
+  .arrow-down {
+    position: absolute;
+    bottom:5vh;
+    //display:block;
+    //right:50vw;
+    left: 45vw;
+    margin-right: -55vw;
+    cursor:pointer;
+  }
 
   body {
     font-family: Helvetica, sans-serif;
@@ -24,18 +45,7 @@ html {
     min-height: 100vh;
   }
 
-  .arrow-up {
-    position: absolute;
-    top:5vh;
-    left:50vw;
-    cursor:pointer;
-  }
-  .arrow-down {
-    position: absolute;
-    bottom:5vh;
-    left:50vw;
-    cursor:pointer;
-  }
+
 
   [ui-view].ng-enter, [ui-view].ng-leave {
 

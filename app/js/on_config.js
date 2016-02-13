@@ -22,6 +22,12 @@ function OnConfig($stateProvider, $locationProvider, $urlRouterProvider) {
             templateUrl: 'howto.html',
             title: 'Howto'
         })
+        .state('Grid', {
+            url: '/grid',
+            controller: 'GridCtrl as grid',
+            templateUrl: 'grid.html',
+            title: 'Grid'
+        })
         .state('Statistics', {
             url: '/statistics',
             controller: 'StatisticsCtrl as statistics',
