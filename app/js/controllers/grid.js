@@ -1,4 +1,4 @@
-function GridCtrl($log, $state) {
+function GridCtrl($state, $uibModal, $scope) {
     'ngInject';
 
     // ViewModel
@@ -8,14 +8,14 @@ function GridCtrl($log, $state) {
         vm.title = 'Matches';
         vm.subtitle = 'Chose wisely you match';
         vm.matchs = [];
-        var i = 0;
-        for (i; i < 15; i++) {
+        var i = Math.floor(Math.random()*30);
+        for (i; i > 0; i--) {
             vm.matchs.push(
                 {
-                    title: 'Math '+i,
+                    title: 'Match '+i,
                     id: i,
-                    team1: 'TEAM 1',
-                    team2: 'TEAM 2'
+                    team1: {name:'TEAM ' + Math.floor(Math.random()*100)},
+                    team2: {name:'TEAM ' + Math.floor(Math.random()*100)}
                 }
             );
         }
@@ -29,19 +29,32 @@ function GridCtrl($log, $state) {
             isopen: false
         };
 
-        vm.toggled = function(open) {
-            console.log('Dropdown is now: ', open);
-        };
+    };
 
-        vm.toggleDropdown = function($event) {
-            $event.preventDefault();
-            $event.stopPropagation();
-            $scope.status.isopen = !vm.status.isopen;
-        };
+    vm.toggled = function(open) {
+        console.log('Dropdown is now: ', open);
+    };
 
+    vm.toggleDropdown = function($event) {
+        $event.preventDefault();
+        $event.stopPropagation();
+        vm.status.isopen = !vm.status.isopen;
+    };
 
+    vm.openModal = function (match) {
+        $scope.modalInstance = $uibModal.open({
+            templateUrl: 'modals/match.modal.html',
+            controller: 'MatchModalCtrl as match',
+            resolve: {
+                match: match
+            },
+            size: 'lg',
+            scope: $scope
+        });
 
     };
+
+
     init();
 
    // vm.content = 'It\'s already under construction! see you soon!';

@@ -24,7 +24,8 @@ function Timeline() {
                 console.log(scope.search.team);
             };
 
-            scope.openDatepicker = function($event) {
+            //$event
+            scope.openDatepicker = function() {
                 scope.datepicker.opened = true;
             };
 

@@ -7,11 +7,11 @@ function Search() {
             title: '@',
             message: '@search'
         },
-        link: (scope, element) => {
+        link: (scope) => {
             var init = function() {
                 scope.search = {};
                 scope.search.team = '';
-                scope.search.competition = '0';
+                scope.search.competition = 'Competition';
             };
             init();
             scope.change = function(competition) {

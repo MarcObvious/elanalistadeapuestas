@@ -1,11 +1,11 @@
 import angular from 'angular';
+var uibs = require('../../node_modules/angular-ui-bootstrap');
 
 // angular modules
 import constants from './constants';
 import onConfig  from './on_config';
 import onRun     from './on_run';
 import 'angular-ui-router';
-import 'angular-bootstrap';
 import 'angular-animate';
 import './templates';
 import './filters';
@@ -22,7 +22,8 @@ const requires = [
     'app.filters',
     'app.controllers',
     'app.services',
-    'app.directives'
+    'app.directives',
+    uibs,
 ];
 
 // mount on window for testing

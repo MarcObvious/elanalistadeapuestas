@@ -1,55 +1,32 @@
-<div class="container grid">
-
-    <span uib-dropdown on-toggle="grid.toggled(open)">
-      <a href id="simple-dropdown" uib-dropdown-toggle>
-          Click me for a dropdown, yo!
-      </a>
-      <ul uib-dropdown-menu aria-labelledby="simple-dropdown">
-          <li ng-repeat="choice in items">
-              <a href>{{grid.choice}}</a>
-          </li>
-      </ul>
-    </span>
-
-    <!-- Single button -->
-    <div class="btn-group" uib-dropdown is-open="status.isopen">
-        <button id="single-button" type="button" class="btn btn-primary" uib-dropdown-toggle ng-disabled="disabled">
-            Button dropdown <span class="caret"></span>
-        </button>
-        <ul uib-dropdown-menu role="menu" aria-labelledby="single-button">
-            <li role="menuitem"><a href="#">Action</a></li>
-            <li role="menuitem"><a href="#">Another action</a></li>
-            <li role="menuitem"><a href="#">Something else here</a></li>
-            <li class="divider"></li>
-            <li role="menuitem"><a href="#">Separated link</a></li>
-        </ul>
-    </div>
-
-
-
+<div class="container grid-body">
     <div class="grid-header">
-        <div class="col-xs-12 col-lg-6">
-            <h1>{{grid.title}}</h1>
-        </div>
-        <div class="col-xs-12 col-lg-6">
-            <search></search>
+        <div class="col-xs-12 panel panel-default">
+            <div class="col-xs-12 col-lg-6">
+                <h1>{{grid.title}}</h1>
+
+            </div>
+            <div class="col-xs-12 col-lg-6">
+                <search></search>
+            </div>
         </div>
     </div>
 
-    <div class="grid-body row-fluid clearfix">
+    <div class="grid-center row-fluid clearfix">
         <div class="col-xs-12 col-sm-6 col-md-4 col-lg-2" ng-repeat="match in grid.matchs">
             <div class="panel panel-default">
                 <div class="panel-heading">{{match.title}}</div>
                 <div class="panel-body text-center">
-                    <h3>{{match.team1}}</h3>
+                    <h3>{{match.team1.name}}</h3>
                     <h1>VS</h1>
-                    <h3>{{match.team2}}</h3>
-                    <button class="btn btn-default btn-success" type="button" ng-click="grid.openModal()" tooltip="Send Text"><i class="glyphicon glyphicon-info-sign"></i> More..</button>
+                    <h3>{{match.team2.name}}</h3>
+                    <button class="btn btn-default btn-success" type="button" ng-click="grid.openModal(match)" tooltip="Send Text"><i class="glyphicon glyphicon-info-sign"></i> More..</button>
                 </div>
             </div>
         </div>
     </div>
     <div class="grid-footer">
+        <div class="col-xs-12 col-lg-6">
         <timeline></timeline>
+            </div>
     </div>
 </div>

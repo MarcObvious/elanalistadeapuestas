@@ -35,6 +35,9 @@ html {
     color: $font-color--light;
     background-color: $background--light;
     padding: $half-space;
+    .modal {
+      color: $font-color--dark;
+    }
   }
 
   .layer1 {

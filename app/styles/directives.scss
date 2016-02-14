@@ -1,27 +1,29 @@
 .search {
-  //position:absolute;
-  //width:40vw;
-  //top:5vh;
-  //left: 45%;
-  .search-block {
-    //position:fixed;
+  padding-top:20px;
+ /* .search-block {
+   !* position:inherit;
+    //display: block;
+    float: left;
     .search-select {
-      width:120px;
-      position: relative;
-      //width:50%;
+      position:absolute;
+      width:200px;
+      //position:fixed;
+      //display: block;
+
+    }*!
+    !*.search-text {
+      position:absolute;
       top:0;
+      left:200px;
+      //position:fixed;
+      //display: block;
 
     }
-    .search-text {
-      position: absolute;
-      width:170px;
-      left:120px;
-    }
-
     .search-button {
-      position: absolute;
-      left: 290px;
-    }
+      position:absolute;
+      top:0;
+      left:200px;
+    }*!
 
-  }
+  }*/
 }
