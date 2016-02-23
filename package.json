@@ -85,7 +85,6 @@
   },
   "license": "MIT",
   "dependencies": {
-
     "font-awesome": "^4.5.0"
   }
 }

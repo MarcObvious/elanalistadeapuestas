@@ -1,4 +1,11 @@
+@import 'vars';
+
 .statement-body {
+  color: $font-color--dark;
+
+  .statement-arrow-down {
+    color: $font-color--light;
+  }
   .statement-title {
     position:absolute;
     top: 5%;

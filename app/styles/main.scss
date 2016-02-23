@@ -54,10 +54,10 @@ html {
 
     /* -webkit-transition:all .5s ease-in-out;
      transition:all .5s ease-in-out;*/
-    -webkit-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s;
-    -moz-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s;
-    -o-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s;
-    transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s;
+    -webkit-transition:all cubic-bezier(0.25,0.1,0.25,1) 1.5s;
+    -moz-transition:all cubic-bezier(0.25,0.1,0.25,1) 1.5s;
+    -o-transition:all cubic-bezier(0.25,0.1,0.25,1) 1.5s;
+    transition:all cubic-bezier(0.25,0.1,0.25,1) 1.5s;
 
   }
 

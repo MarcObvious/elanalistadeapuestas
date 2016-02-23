@@ -43,7 +43,7 @@ function buildScript(file) {
 
   const transforms = [
     { 'name':babelify, 'options': {}},
-    { 'name':debowerify, 'options': {}},
+    { 'name':debowerify, 'options': {preferNPM:true}},
     { 'name':ngAnnotate, 'options': {}},
     { 'name':'brfs', 'options': {}},
     { 'name':'bulkify', 'options': {}}

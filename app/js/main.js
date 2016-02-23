@@ -23,7 +23,7 @@ const requires = [
     'app.controllers',
     'app.services',
     'app.directives',
-    uibs,
+    uibs
 ];
 
 // mount on window for testing
