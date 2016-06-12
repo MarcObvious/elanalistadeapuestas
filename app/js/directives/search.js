@@ -9,12 +9,35 @@ function Search() {
       objsearch: '='
     },
     link: (scope) => {
-      var init = function () {
 
+      var init = function () {
+        scope.competitionname = 'All';
+        scope.query = '';
+        changeName(scope.objsearch.competition);
       };
-      init();
+
+      var changeName = function(competition){
+        switch(competition){
+          case '1':
+            scope.competitionname = 'BBVA';
+            break;
+          case '8':
+            scope.competitionname = 'Bundesliga';
+            break;
+          case '10':
+            scope.competitionname = 'Premier';
+            break;
+          case '0':
+            scope.competitionname = 'All';
+            break;
+        }
+      };
+
+
+
       scope.changeC = function (competition) {
         scope.objsearch.competition = competition;
+        changeName(competition);
       };
       scope.changeY = function (year) {
         scope.objsearch.year = year;
@@ -22,6 +45,7 @@ function Search() {
       scope.changeR = function (round) {
         scope.objsearch.round = round;
       };
+
 
       scope.range = function (min, max, step) {
         step = step || 1;
@@ -33,10 +57,10 @@ function Search() {
       };
 
       scope.doSearch = function () {
-        console.log('directive!?');
-        console.log(scope.search.competition);
-        console.log(scope.search.team);
+        scope.objsearch.team = scope.query;
       };
+
+      init();
 
     }
   };
