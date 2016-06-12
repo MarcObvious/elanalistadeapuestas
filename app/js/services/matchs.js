@@ -7,29 +7,10 @@ function MatchsService($http, AppSettings) {
     return new Promise((resolve, reject) => {
       var url = AppSettings.apiUrl + 'match/';
 
-      /*Object.keys(params).forEach((key) => {
-       url += params[key] + '/';
-       });*/
       url +=  params.id;
-      url +=  params.year === 'Year' ? '/2015' : ('/'+ params.year);
-      url +=  params.round === 'Round' ? '/0' : ('/' + params.round);
-      switch (params.competition) {
-        case 'BBVA':
-          url += '/1';
-          break;
-        case 'Premier':
-          url += '/10';
-          break;
-        case 'Bundesliga':
-          url += '/8';
-          break;
-        default:
-        case 'All':
-        case 'Competition':
-          url +=   '/0';
-          break;
-
-      }
+      url +=   ('/'+ params.year);
+      url +=   ('/' + params.round);
+      url +=   ('/' + params.competition);
 
       url +=  '/' + params.team;
 

@@ -44,9 +44,9 @@ function GridCtrl($state, $uibModal, $scope, MatchsService, AllService) {
     vm.init=0;
     vm.search = {
       team : '',
-      competition: 'Competition',
-      round: 'Round',
-      year: 'Year'
+      competition: '1',
+      round: '0',
+      year: '2015'
     };
     getMatchs(vm.search);
 
