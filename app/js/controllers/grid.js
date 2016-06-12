@@ -52,28 +52,28 @@ function GridCtrl($state, $uibModal, $scope, MatchsService, AllService) {
 
   };
 
-  $scope.$watch('grid.search.competition', function(change){
+  $scope.$watch('grid.search.competition', function(){
     if (vm.init > 3){
       getMatchs(vm.search);
     }
     ++vm.init;
   });
 
-  $scope.$watch('grid.search.round', function(change){
+  $scope.$watch('grid.search.round', function(){
     if (vm.init > 3){
       getMatchs(vm.search);
     }
     ++vm.init;
   });
 
-  $scope.$watch('grid.search.year', function(change){
+  $scope.$watch('grid.search.year', function(){
     if (vm.init > 3){
       getMatchs(vm.search);
     }
     ++vm.init;
   });
 
-  $scope.$watch('grid.search.team', function(change){
+  $scope.$watch('grid.search.team', function(){
     if (vm.init > 3){
       getMatchs(vm.search);
     }

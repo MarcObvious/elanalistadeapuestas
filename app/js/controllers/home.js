@@ -6,6 +6,7 @@ function HomeCtrl($log, $state) {
     var init = function() {
         vm.subtitle = 'The';
         vm.title = 'Analyst';
+        vm.title2 = 'Beta (1.0)';
         vm.content = 'It\'s already under construction! see you soon!';
     };
 
