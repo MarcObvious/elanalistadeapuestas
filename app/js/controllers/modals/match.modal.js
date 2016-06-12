@@ -1,41 +1,52 @@
-function MatchModalCtrl($log, match) {
-    'ngInject';
+function MatchModalCtrl($log, match, matchDetails) {
+  'ngInject';
 
-    // ViewModel
-    const vm = this;
+  // ViewModel
+  const vm = this;
 
-    var init = function() {
-        vm.title = 'Example 2';
-        vm.number = 151551515;
-        vm.m = match;
-        vm.bets = [];
-        vm.m.team1.line_up = [];
-        vm.m.team2.line_up = [];
-        var i = Math.floor(Math.random()*50);
-        for (i; i > 0; i--) {
-            vm.bets.push(
-                {
-                    title: 'Bet '+Math.floor(Math.random()*100),
-                    value: Math.floor(Math.random()*100),
-                    page: 'BetHouse ' + Math.floor(Math.random()*100),
-                    quote: Math.floor(Math.random()*2)
-                }
-            );
-        }
-        console.log(vm.m);
-        i = 12;
-        for (i; i > 0; i--){
-            vm.m.team1.line_up.push({name:'Player ' + i, position: Math.floor(Math.random()*100)});
-            vm.m.team2.line_up.push({name:'Player ' + i, position: Math.floor(Math.random()*100)});
-        }
-    };
+  var init = function() {
+    vm.m = match;
+    vm.md = matchDetails;
+    vm.md.LALGS = vm.md.LALGS ? vm.md.LALGS : 0;
+    vm.md.LALGR = vm.md.LALGR ? vm.md.LALGR : 0;
+    vm.md.VAVGS = vm.md.VAVGS ? vm.md.VAVGS : 0;
+    vm.md.VAVGR = vm.md.VAVGR ? vm.md.VAVGR : 0;
 
-    init();
-   // console.log(match);
+    vm.bets = [];
+    vm.bets.push(
+      {
+        title: 'Winner',
+        value: Math.random() <= 0.33 ? 'Local' : (Math.random() <= 0.66 ? 'Visitor': 'Draw'),
+        prob:  (Math.random()).toFixed(5),
+        quote: Math.floor(Math.random()*3)+1
+      }
+    );
+
+    vm.bets.push(
+      {
+        title: 'Total Goals',
+        value: Math.floor(Math.random()*10),
+        prob:   (Math.random()).toFixed(5),
+        quote: Math.floor(Math.random()*3)+1
+      }
+    );
+
+    vm.bets.push(
+      {
+        title: 'Total Cards',
+        value: Math.floor(Math.random()*10),
+        prob:   (Math.random()).toFixed(5),
+        quote: Math.floor(Math.random()*3)+1
+      }
+    );
+
+  };
+
+  init();
 
 }
 
 export default {
-    name: 'MatchModalCtrl',
-    fn: MatchModalCtrl
+  name: 'MatchModalCtrl',
+  fn: MatchModalCtrl
 };

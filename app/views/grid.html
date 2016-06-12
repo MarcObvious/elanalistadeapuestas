@@ -1,32 +1,36 @@
 <div class="container grid-body">
-    <div class="grid-header">
-        <div class="col-xs-12 panel panel-default">
-            <div class="col-xs-12 col-lg-6">
-                <h1>{{grid.title}}</h1>
+  <div class="layer1" background-image
+       data-background-src="../images/wall_4_1920.jpg"></div>
+  <div class="grid-header">
+    <div class="col-xs-12 panel panel-default">
+      <div class="col-xs-6 col-lg-6">
+        <h1>{{grid.title}}</h1>
+        <!-- <timeline date="grid.date"></timeline>-->
 
-            </div>
-            <div class="col-xs-12 col-lg-6">
-                <search></search>
-            </div>
-        </div>
-    </div>
+      </div>
+      <div class="col-xs-6 col-lg-6">
+        <search objsearch="grid.search"></search>
+      </div>
 
-    <div class="grid-center row-fluid clearfix">
-        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-2" ng-repeat="match in grid.matchs">
-            <div class="panel panel-default">
-                <div class="panel-heading">{{match.title}}</div>
-                <div class="panel-body text-center">
-                    <h3>{{match.team1.name}}</h3>
-                    <h1>VS</h1>
-                    <h3>{{match.team2.name}}</h3>
-                    <button class="btn btn-default btn-success" type="button" ng-click="grid.openModal(match)" tooltip="Send Text"><i class="glyphicon glyphicon-info-sign"></i> More..</button>
-                </div>
-            </div>
+    </div>
+  </div>
+
+  <div class="grid-center row-fluid clearfix">
+    <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3" ng-repeat="match in grid.matchs">
+      <div class="panel panel-default">
+        <div class="panel-heading">{{match.title}}</div>
+        <div class="panel-body text-center">
+          <h3>{{match.team1.name | limitTo: 15 }}{{match.team1.name.length > 15 ? '...' : ''}}</h3>
+          <h1>VS</h1>
+          <h3>{{match.team2.name | limitTo: 15 }}{{match.team2.name.length > 15 ? '...' : ''}}</h3>
+          <button class="btn btn-default btn-success" type="button" ng-click="grid.openModal(match)" tooltip="Send Text"><i class="glyphicon glyphicon-info-sign"></i> More..</button>
         </div>
+      </div>
     </div>
-    <div class="grid-footer">
-        <div class="col-xs-12 col-lg-6">
-        <timeline></timeline>
-            </div>
+  </div>
+  <div class="grid-footer">
+    <div class="col-xs-12 col-lg-6">
+
     </div>
+  </div>
 </div>

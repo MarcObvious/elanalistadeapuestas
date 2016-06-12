@@ -3,6 +3,10 @@
 .statement-body {
   color: $font-color--dark;
 
+  .layer-up {
+    z-index: 1000;
+  }
+
   .statement-arrow-down {
     color: $font-color--light;
   }

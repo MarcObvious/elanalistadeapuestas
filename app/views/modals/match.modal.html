@@ -1,113 +1,228 @@
 <div>
-    <div class="modal-header">
-        <h3 class="modal-title upper">{{match.m.title}}</h3>
-    </div>
+  <div class="modal-header">
+    <h3 class="modal-title upper">{{match.m.title}} - {{match.m.competition}} - Temp: {{match.md.temp}}</h3>
+  </div>
 
-    <div class="modal-body row-fluid clearfix">
-        <div class="col-lg-3">
-            <div class="panel panel-default">
-                <div class="panel-heading">{{match.m.team1.name}} Line-up</div>
-                <div class="panel-body text-center">
-                    <table class="table table-striped table-bordered table-hover text-center">
-                        <thead>
-                        <th class="text-center">Player</th>
-                        <th class="text-center">Position</th>
-                        </thead>
-                        <tr ng-repeat="team1 in match.m.team1.line_up">
-                            <td title="Name">
-                                {{team1.name}}</td>
-                            <td title="Position">
-                                {{team1.position}}</td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
-            <div class="panel panel-default">
-                <div class="panel-heading">{{match.m.team1.name}} Other shit</div>
-                <div class="panel-body text-center">
-                    <table class="table table-striped table-bordered table-hover text-center">
-                        <thead>
-                        <th class="text-center">Player</th>
-                        <th class="text-center">Position</th>
-                        </thead>
-                        <tr ng-repeat="team1 in match.m.team1.line_up">
-                            <td title="Name">
-                                {{team1.name}}</td>
-                            <td title="Position">
-                                {{team1.position}}</td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
+  <div class="modal-body row-fluid clearfix">
+
+    <div class="col-lg-3">
+      <div class="panel panel-default">
+        <div class="panel-heading">{{match.m.team1.name}} Shield</div>
+        <div class="panel-body text-center">
+          <img src="{{match.m.team1.shield}} ">
         </div>
-        <div class="col-lg-6">
-            <div class="panel panel-default">
-                <div class="panel-heading">Match Details</div>
-                <div class="panel-body text-center">
-                    <h3>{{match.m.team1.name}}</h3>
-                    <h1>VS</h1>
-                    <h3>{{match.m.team2.name}}</h3>
-                </div>
-            </div>
-            <div class="panel panel-default">
-                <div class="panel-heading">Predictions</div>
-                <div class="panel-body text-center">
-                    <table class="table table-striped table-bordered table-hover text-center">
-                        <thead>
-                        <th class="text-center">Title</th>
-                        <th class="text-center">Value</th>
-                        <th class="text-center">BetHouse</th>
-                        <th class="text-center">Quote</th>
-                        </thead>
-                        <tr ng-repeat="bet in match.bets">
-                            <td title="Title">
-                                {{bet.title}}</td>
-                            <td title="Value">
-                                {{bet.value}}</td>
-                            <td title="Bethouse">
-                                {{bet.page}}</td>
-                            <td title="Quote">
-                                {{bet.quote}}</td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">{{match.m.team1.name | limitTo: 15 }}{{match.m.team1.name.length > 15 ? '...' : ''}} - Stats last round</div>
+        <div class="panel-body text-center">
+          <table class="table table-striped table-bordered table-hover text-center">
+            <tr>
+              <td>Points</td>
+              <td>{{match.md.local_points}}</td>
+            </tr>
+            <tr>
+              <td>Wins</td>
+              <td>{{match.md.local_wins}}</td>
+            </tr>
+            <tr>
+              <td>Draws</td>
+              <td>{{match.md.local_draws}}</td>
+            </tr>
+            <tr>
+              <td>Losses</td>
+              <td>{{match.md.local_losses}}</td>
+            </tr>
+            <tr>
+              <td>G. favor</td>
+              <td>{{match.md.local_gf}}</td>
+            </tr>
+            <tr>
+              <td>G. Against</td>
+              <td>{{match.md.local_ga}}</td>
+            </tr>
+            <tr>
+              <td>Form</td>
+              <td>{{match.md.local_form | limitTo: 10}}</td>
+            </tr>
+            <tr>
+              <td>LALGS</td>
+              <td>{{match.md.LALGS | limitTo: 7}}</td>
+            </tr>
+            <tr>
+              <td>LALGR</td>
+              <td>{{match.md.LALGR | limitTo: 7}}</td>
+            </tr>
+          </table>
         </div>
-        <div class="col-lg-3">
-            <div class="panel panel-default">
-                <div class="panel-heading">{{match.m.team2.name}} Line-up</div>
-                <div class="panel-body text-center">
-                    <table class="table table-striped table-bordered table-hover text-center">
-                        <thead>
-                        <th class="text-center">Player</th>
-                        <th class="text-center">Position</th>
-                        </thead>
-                        <tr ng-repeat="team2 in match.m.team2.line_up">
-                            <td title="Name">
-                                {{team2.name}}</td>
-                            <td title="Position">
-                                {{team2.position}}</td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
-            <div class="panel panel-default">
-                <div class="panel-heading">{{match.m.team2.name}} Other shit</div>
-                <div class="panel-body text-center">
-                    <table class="table table-striped table-bordered table-hover text-center">
-                        <thead>
-                        <th class="text-center">Player</th>
-                        <th class="text-center">Position</th>
-                        </thead>
-                        <tr ng-repeat="team1 in match.m.team1.line_up">
-                            <td title="Name">
-                                {{team1.name}}</td>
-                            <td title="Position">
-                                {{team1.position}}</td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
-        </div>
+      </div>
+
+
     </div>
+    <div class="col-lg-6">
+      <div class="panel panel-default">
+        <div class="panel-heading">Match Details</div>
+        <div class="panel-body text-center">
+          <table class="table table-striped table-bordered table-hover text-center">
+            <tr>
+              <td>
+                <h3><br></h3>
+                <h1>{{match.m.team1.goals}}</h1>
+              </td>
+              <td>
+                <h3>{{match.m.team1.name}}</h3>
+                <h1>VS</h1>
+                <h3>{{match.m.team2.name}}</h3>
+              <td>
+                <h3><br></h3>
+                <h1>{{match.m.team2.goals}}</h1>
+              </td>
+
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">Predictions</div>
+        <div class="panel-body text-center">
+          <table class="table table-striped table-bordered table-hover text-center">
+            <thead>
+            <th class="text-center">Title</th>
+            <th class="text-center">Value</th>
+            <th class="text-center">Prob</th>
+            <th class="text-center">Quote</th>
+            </thead>
+            <tr ng-repeat="bet in match.bets">
+              <td title="Title">
+                {{bet.title}}</td>
+              <td title="Value">
+                {{bet.value}}</td>
+              <td title="Prob">
+                {{bet.prob}}</td>
+              <td title="Quote">
+                {{bet.quote}}</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-3">
+      <div class="panel panel-default">
+        <div class="panel-heading">{{match.m.team2.name}} Shield</div>
+        <div class="panel-body text-center">
+          <img src="{{match.m.team2.shield}} ">
+        </div>
+      </div>
+
+      <div class="panel panel-default">
+        <div class="panel-heading">{{match.m.team2.name | limitTo: 15 }}{{match.m.team2.name.length > 15 ? '...' : ''}} - Stats last round</div>
+        <div class="panel-body text-center">
+          <table class="table table-striped table-bordered table-hover text-center">
+            <tr>
+              <td>Points</td>
+              <td>{{match.md.visitor_points}}</td>
+            </tr>
+            <tr>
+              <td>Wins</td>
+              <td>{{match.md.visitor_wins}}</td>
+            </tr>
+            <tr>
+              <td>Draws</td>
+              <td>{{match.md.visitor_draws}}</td>
+            </tr>
+            <tr>
+              <td>Losses</td>
+              <td>{{match.md.visitor_losses}}</td>
+            </tr>
+            <tr>
+              <td>G. favor</td>
+              <td>{{match.md.visitor_gf}}</td>
+            </tr>
+            <tr>
+              <td>G. Against</td>
+              <td>{{match.md.visitor_ga}}</td>
+            </tr>
+            <tr>
+              <td>Form</td>
+              <td>{{match.md.visitor_form | limitTo: 10}}</td>
+            </tr>
+            <tr>
+              <td>VAVGS</td>
+              <td>{{match.md.VAVGS | limitTo: 7}}</td>
+            </tr>
+            <tr>
+              <td>VAVGR</td>
+              <td>{{match.md.VAVGR | limitTo: 7}}</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+
+
+    </div>
+    <div class="col-lg-6">
+      <div class="panel panel-default" ng-click="isCollapsed1 = !isCollapsed1">
+        <div class="panel-heading">{{match.m.team1.name | limitTo: 15 }}{{match.m.team1.name.length > 15 ? '...' : ''}} - Line up</div>
+        <div class="panel-body text-center" uib-collapse="isCollapsed1">
+          <table class="table table-striped table-bordered table-hover text-center">
+            <thead>
+            <th class="text-center"></th>
+            <th class="text-center">Player</th>
+            <th class="text-center">Pos</th>
+            <th class="text-center">Goals</th>
+            <th class="text-center">Reds</th>
+            <th class="text-center">Yelows</th>
+            </thead>
+            <tr ng-repeat="team1 in match.m.team1.lineup">
+              <td title="image">
+                <img src="{{team1.image}}">
+              </td>
+              <td title="Name">
+                {{team1.nick}}</td>
+              <td title="Position">
+                {{team1.pos}}</td>
+              <td title="Goals">
+                {{team1.goals}}</td>
+              <td title="Reds">
+                {{team1.reds}}</td>
+              <td title="Yelows">
+                {{team1.yellows}}</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <div class="panel panel-default">
+        <div class="panel-heading" ng-click="isCollapsed2 = !isCollapsed2">{{match.m.team2.name | limitTo: 15 }}{{match.m.team2.name.length > 15 ? '...' : ''}} - Line up</div>
+        <div class="panel-body text-center" uib-collapse="isCollapsed2">
+          <table class="table table-striped table-bordered table-hover text-center">
+            <thead>
+            <th class="text-center"></th>
+            <th class="text-center">Player</th>
+            <th class="text-center">Pos</th>
+            <th class="text-center">Goals</th>
+            <th class="text-center">Reds</th>
+            <th class="text-center">Yelows</th>
+            </thead>
+            <tr ng-repeat="team2 in match.m.team2.lineup">
+              <td title="image">
+                <img src="{{team2.image}}">
+              </td>
+              <td title="Name">
+                {{team2.nick}}</td>
+              <td title="Position">
+                {{team2.pos}}</td>
+              <td title="Goals">
+                {{team2.goals}}</td>
+              <td title="Reds">
+                {{team2.reds}}</td>
+              <td title="Yelows">
+                {{team2.yellows}}</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

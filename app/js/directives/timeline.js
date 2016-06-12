@@ -5,7 +5,8 @@ function Timeline() {
         templateUrl: 'directives/timeline.html',
         scope: {
             title: '@',
-            message: '@timeline'
+            message: '@timeline',
+            date: '='
         },
         link: (scope) => {
             var init = function() {
@@ -15,14 +16,6 @@ function Timeline() {
                 scope.datepicker.opened = false;
             };
             init();
-            scope.change = function(competition) {
-                scope.search.competition = competition;
-            };
-            scope.doSearch = function() {
-                console.log('directive!?');
-                console.log(scope.search.competition);
-                console.log(scope.search.team);
-            };
 
             //$event
             scope.openDatepicker = function() {

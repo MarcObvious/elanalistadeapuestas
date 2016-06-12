@@ -1,20 +1,25 @@
 <div class="container statement-body">
 
-    <div class="layer1" background-image
-         data-background-src="../images/crowdback.svg"></div>
 
-    <h1 class="heading -large">{{statement.title}}</h1>
+        <div class="layer1" background-image
+             data-background-src="../images/crowdback.svg" ng-swipe-rigth="statement.swipe($event)"></div>
+
+        <h1 class="heading -large">{{statement.title}}</h1>
 
 
-    <div class="col-lg-6 col-md-6">
-        <br><br>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-    </div>
-    <div class="arrow-up"  ng-click="statement.arrowUp()">
-        <h1 class="heading -xl"><i class="fa fa-arrow-up"></i></h1>
-    </div>
+        <div class="col-lg-9 col-md-9">
+            <br><br>
+            <p>Nowadays there is a growing expansion of online betting sites. As a result a new figure has emerged: the <strong>‘Tipster’</strong>. The tipster is a betting expert who advises about betting decisions, usually just based on subjective intuition.</p>
+            <p>The aim of this project is to <strong>build a fully functional platform containing reliable information about football soccer past matches as well as Machine-Learning-based predictions of future matches results</strong>. With this aim, a large amount of data has been collected and used to build a database containing all the scores -among other information- for all the matches played in three major European leagues (BBVA, Bundesliga and Premier League) from 2013 until today.
+            </p>
+            <p>After cleaning the data and extracting relevant features from it, a predictive model based on different Machine Learning algorithms has been induced. The model is <strong>able to learn from its own errors</strong> and is updated with new data every time a match is played. The model provides predictions to an online site to be displayed along with other statistics.</p>
+        </div>
+        <div class="arrow-up"  ng-click="statement.arrowUp()">
+            <h1 class="heading -xl"><i class="fa fa-arrow-up"></i></h1>
+        </div>
 
-    <div class="arrow-down statement-arrow-down"  ng-click="statement.arrowDown()">
-        <h1 class="heading -xl"><i class="fa fa-arrow-down"></i></h1>
-    </div>
+        <div class="arrow-down statement-arrow-down"  ng-click="statement.arrowDown()">
+            <h1 class="heading -xl"><i class="fa fa-arrow-down"></i></h1>
+        </div>
+
 </div>

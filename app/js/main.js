@@ -1,12 +1,10 @@
 import angular from 'angular';
 var uibs = require('../../node_modules/angular-ui-bootstrap');
-
 // angular modules
 import constants from './constants';
 import onConfig  from './on_config';
 import onRun     from './on_run';
 import 'angular-ui-router';
-import 'angular-animate';
 import './templates';
 import './filters';
 import './controllers';
@@ -15,15 +13,14 @@ import './directives';
 
 // create and bootstrap application
 const requires = [
-    'ui.router',
-    'ui.bootstrap',
-    'ngAnimate',
-    'templates',
-    'app.filters',
-    'app.controllers',
-    'app.services',
-    'app.directives',
-    uibs
+  'ui.router',
+  'ui.bootstrap',
+  'templates',
+  'app.filters',
+  'app.controllers',
+  'app.services',
+  'app.directives',
+  uibs
 ];
 
 // mount on window for testing
@@ -36,5 +33,5 @@ angular.module('app').config(onConfig);
 angular.module('app').run(onRun);
 
 angular.bootstrap(document, ['app'], {
-    strictDi: true
+  strictDi: true
 });
