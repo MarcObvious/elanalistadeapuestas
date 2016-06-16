@@ -1,6 +1,7 @@
 #elanalistadeapuestas
 
-AngularJs webpage for the final project 'Predicció i mostra de resultats futbolístics utilitzant algoritmes de Machine Learning'.
+AngularJs simple WebPage for the final project 'Predicció i mostra de resultats futbolístics utilitzant algoritmes de Machine Learning'.
+
 It connects to a nodeJs API to retrieve all the data.
 
 The aim of this project is to build a fully functional platform containing reliable
