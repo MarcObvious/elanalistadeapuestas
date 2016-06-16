@@ -6,9 +6,6 @@ function StatementCtrl($log, $state) {
 
     vm.title = 'Statement Page';
     vm.content = 'It\'s already under construction! see you soon!';
-    $log.debug(vm);
-
-    vm.swipe = $event => console.log($event);
 
     vm.arrowUp = function(){
         $state.go('Home', {}, {'location': true, 'reload': true});

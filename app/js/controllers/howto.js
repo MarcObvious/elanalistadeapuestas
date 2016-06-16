@@ -5,7 +5,6 @@ function HowtoCtrl($log, $state) {
     const vm = this;
 
     vm.title = 'Howto Page!';
-    vm.content = 'It\'s already under construction! see you soon!';
     $log.debug(vm);
 
     vm.arrowUp = function(){

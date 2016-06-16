@@ -1,13 +1,22 @@
 <div class="container grid-body">
+
+
+
   <div class="layer1" background-image
        data-background-src="../images/wall_4_1920.jpg"></div>
   <div class="grid-header">
+
     <div class="col-xs-12 panel panel-default">
       <div class="col-xs-12 col-lg-4">
         <h1>{{grid.title}}</h1>
       </div>
-      <div class="col-xs-12 col-lg-8">
+      <div class="col-xs-12 col-lg-7">
         <search objsearch="grid.search"></search>
+      </div>
+      <div class="col-xs-12 col-lg-1">
+        <div class="arrow-up-grid"  ng-click="grid.arrowUp()">
+          <h1 class="heading -xl"><i class="fa fa-arrow-up"></i></h1>
+        </div>
       </div>
 
     </div>

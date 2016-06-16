@@ -4,7 +4,10 @@
   color: $font-color--dark;
 
   .grid-header {
+    .arrow-up-grid {
 
+      cursor:pointer;
+    }
   }
 
   .grid-center {
