@@ -1,4 +1,4 @@
-#elanalistadeapuestas
+#The Analyst - El Analista de Apuestas
 
 AngularJs simple WebPage for the final project 'Predicció i mostra de resultats futbolístics utilitzant algoritmes de Machine Learning'.
 
