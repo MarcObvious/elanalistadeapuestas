@@ -13,7 +13,7 @@
         </div>
       </div>
       <div class="panel panel-default">
-        <div class="panel-heading">{{match.m.team1.name | limitTo: 15 }}{{match.m.team1.name.length > 15 ? '...' : ''}} - Stats last round</div>
+        <div class="panel-heading">{{match.m.team1.name | limitTo: 15 }}{{match.m.team1.name.length > 15 ? '...' : ''}} - S last round</div>
         <div class="panel-body text-center">
           <table class="table table-striped table-bordered table-hover text-center">
             <tr>
@@ -91,16 +91,42 @@
             <th class="text-center">Prob</th>
             <th class="text-center">Quote</th>
             </thead>
-            <tr ng-repeat="bet in match.bets">
+
+            <!--UNICA PREDICCIÓ DE VERITAT-->
+
+            <tr ng-repeat="matchPredictions in match.m.matchPredictions">
               <td title="Title">
-                {{bet.title}}</td>
+                {{matchPredictions.title}}</td>
               <td title="Value">
-                {{bet.value}}</td>
+                <strong>{{matchPredictions.value}}</strong></td>
               <td title="Prob">
-                {{bet.prob}}</td>
+                <strong>{{matchPredictions.prob}}</strong></td>
               <td title="Quote">
-                {{bet.quote}}</td>
+                *</td>
             </tr>
+<!--
+            AQUESTES PREDICCIONS SON FAKE! (de moment!)
+-->
+            <tr>
+              <td title="Title">
+                Total Cards</td>
+              <td title="Value">
+                <strong>-</strong></td>
+              <td title="Prob">
+                <strong>-</strong></td>
+              <td title="Quote">
+                *</td>
+            </tr>
+            <tr>
+              <td title="Title">
+                Total Outs</td>
+              <td title="Value">
+                <strong>-</strong></td>
+              <td title="Prob">
+                <strong>-</strong></td>
+              <td title="Quote">
+                *</td>
+
           </table>
         </div>
       </div>
@@ -114,7 +140,7 @@
       </div>
 
       <div class="panel panel-default">
-        <div class="panel-heading">{{match.m.team2.name | limitTo: 15 }}{{match.m.team2.name.length > 15 ? '...' : ''}} - Stats last round</div>
+        <div class="panel-heading">{{match.m.team2.name | limitTo: 15 }}{{match.m.team2.name.length > 15 ? '...' : ''}} - S last round</div>
         <div class="panel-body text-center">
           <table class="table table-striped table-bordered table-hover text-center">
             <tr>
