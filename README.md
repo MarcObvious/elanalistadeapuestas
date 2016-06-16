@@ -29,7 +29,13 @@ Bundesliga and Premier League) from 2013 until today.
 ## Boilerplate forked from:
 - `https://github.com/jakemmarsh/angularjs-gulp-browserify-boilerplate`
 
-![Alt text](/app/images/wall_2_1920.jpg?raw=true "Image1")
+## Home page:
+![home](/app/images/portada2.png?raw=true "Image1")
 
+## Grid:
+![Grid](/app/images/grid2.png?raw=true "Image2")
+
+## Match detail:
+![Detail](/app/images/resultat21.png?raw=true "Image3")
 
 [View contributors](https://github.com/MarcObvious/elanalistadeapuestas/graphs/contributors)
