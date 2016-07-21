@@ -36,6 +36,11 @@ export default {
     dest: 'build/fonts'
   },
 
+  htaccess: {
+    src: '.htaccess',
+    dest: 'build/'
+  },
+
   assetExtensions: [
     'js',
     'css',
