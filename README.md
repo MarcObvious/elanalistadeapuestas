@@ -24,7 +24,7 @@ Bundesliga and Premier League) from 2013 until today.
 
 ### Getting the webpage into the server
 1. Run `gulp prod`
-2. `scp -r build/* code@elanalistadeapuestas.com:/home/code/boot-analista`
+2. `scp -r build/. code@elanalistadeapuestas.com:/home/code/boot-analista/build`
 
 
 ## Boilerplate forked from:
