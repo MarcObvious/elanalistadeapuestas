@@ -12,7 +12,7 @@ information- for all the matches played in three major European leagues (BBVA,
 Bundesliga and Premier League) from 2013 until today.
 
 ## API
-- `https://github.com/MarcObvious/api-analistadeapuestas`
+- `https://github.com/MarcObvious/api-elanalistadeapuestas`
 
 ### Live example
 - `http://elanalistadeapuestas.com`
